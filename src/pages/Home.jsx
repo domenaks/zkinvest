@@ -1,48 +1,33 @@
 import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, Dumbbell, Activity, Box } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
     const brands = [
-        "Technogym", "Life Fitness", "Hammer Strength", "Precor", "Matrix", "Eleiko"
+        "Technogym", "Life Fitness", "Hammer Strength", "Precor", "Matrix", "Eleiko", "Rogue", "Concept2", "Onit"
     ];
 
-    const equipment = [
+    const collections = [
         {
             id: 1,
-            name: "Commercial Treadmill Series X",
-            category: "Cardio",
-            image: "https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&q=80&w=800"
+            name: "Strength",
+            description: "Premium dumbbells, plates, and racks.",
+            image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800",
+            icon: <Dumbbell className="h-6 w-6" />
         },
         {
             id: 2,
-            name: "Olympic Power Rack",
-            category: "Strength",
-            image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800"
+            name: "Cardio",
+            description: "Boxing, battle ropes, and endurance gear.",
+            image: "/images/cardio-boxing.png",
+            icon: <Activity className="h-6 w-6" />
         },
         {
             id: 3,
-            name: "Dumbbell Set (5-50kg)",
-            category: "Free Weights",
-            image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&q=80&w=800"
-        },
-        {
-            id: 4,
-            name: "Cable Crossover Machine",
-            category: "Strength",
-            image: "https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&q=80&w=800"
-        },
-        {
-            id: 5,
-            name: "Elliptical Cross Trainer",
-            category: "Cardio",
-            image: "https://images.unsplash.com/photo-1517963879466-e1b54ebd6694?auto=format&fit=crop&q=80&w=800"
-        },
-        {
-            id: 6,
-            name: "Adjustable Bench Press",
-            category: "Strength",
-            image: "https://images.unsplash.com/photo-1598289431512-b97b0917affc?auto=format&fit=crop&q=80&w=800"
+            name: "Functional",
+            description: "Rigs, sleds, and cross-training setups.",
+            image: "/images/functional-rig.png",
+            icon: <Box className="h-6 w-6" />
         }
     ];
 
@@ -56,10 +41,10 @@ const Home = () => {
                         alt="Gym Background"
                         className="w-full h-full object-cover opacity-40"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/50 to-dark"></div>
+                    <div className="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/50 to-dark pointer-events-none"></div>
                 </div>
 
-                <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
+                <div className="relative z-20 text-center max-w-4xl mx-auto px-4">
                     <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
                         Build Your <span className="text-primary">Dream Facility</span>
                     </h1>
@@ -68,69 +53,64 @@ const Home = () => {
                         We supply the world's leading brands to elevate your business.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-primary text-white hover:bg-rose-700 transition-all transform hover:scale-105">
+                        <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-primary text-white hover:bg-rose-700 transition-all transform hover:scale-105 cursor-pointer relative z-30">
                             Request a Quote
                             <ArrowRight className="ml-2 h-5 w-5" />
                         </Link>
-                        <Link to="/about" className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-slate-800 text-white hover:bg-slate-700 transition-all border border-slate-700">
+                        <Link to="/about" className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-slate-800 text-white hover:bg-slate-700 transition-all border border-slate-700 cursor-pointer relative z-30">
                             Learn More
                         </Link>
                     </div>
                 </div>
             </section>
 
-            {/* Brands Section */}
-            <section className="py-10 border-y border-slate-800 bg-slate-900/50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <p className="text-slate-400 text-sm font-semibold uppercase tracking-wider mb-8">Trusted Brands We Supply</p>
-                    <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-                        {brands.map((brand, index) => (
-                            <span key={index} className="text-2xl md:text-3xl font-bold text-slate-300 hover:text-primary transition-colors cursor-default">
-                                {brand}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Featured Equipment */}
+            {/* Our Collections Section */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Featured Equipment</h2>
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our collections</h2>
                     <p className="text-slate-400 max-w-2xl mx-auto">
-                        Explore our selection of high-performance machines and free weights designed for durability and biomechanics.
+                        Curated equipment categories to suit every training style.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {equipment.map((item) => (
-                        <div key={item.id} className="group relative bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10">
-                            <div className="aspect-[4/3] overflow-hidden">
-                                <img
-                                    src={item.image}
-                                    alt={item.name}
-                                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-dark/90 to-transparent opacity-60"></div>
-                            </div>
-                            <div className="absolute bottom-0 left-0 right-0 p-6">
-                                <span className="inline-block px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold mb-2 border border-primary/20">
-                                    {item.category}
-                                </span>
-                                <h3 className="text-xl font-bold text-white mb-1 group-hover:text-primary transition-colors">{item.name}</h3>
-                                <p className="text-slate-400 text-sm mb-4">Professional Grade</p>
-                                <Link to="/contact" className="inline-flex items-center text-sm font-semibold text-white hover:text-primary transition-colors">
-                                    Inquire for Price <ArrowRight className="ml-1 h-4 w-4" />
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {collections.map((collection) => (
+                        <div key={collection.id} className="group relative h-[400px] rounded-2xl overflow-hidden border border-slate-800 hover:border-primary/50 transition-all duration-500">
+                            <img
+                                src={collection.image}
+                                alt={collection.name}
+                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent opacity-90 group-hover:opacity-80 transition-opacity duration-500"></div>
+
+                            <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                                <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/20 text-primary mb-4 backdrop-blur-sm border border-primary/20">
+                                    {collection.icon}
+                                </div>
+                                <h3 className="text-2xl font-bold text-white mb-2">{collection.name}</h3>
+                                <p className="text-slate-300 mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                                    {collection.description}
+                                </p>
+                                <Link to="/contact" className="inline-flex items-center text-primary font-semibold hover:text-white transition-colors cursor-pointer relative z-20">
+                                    Explore <ArrowRight className="ml-2 h-4 w-4" />
                                 </Link>
                             </div>
                         </div>
                     ))}
                 </div>
+            </section>
 
-                <div className="mt-16 text-center">
-                    <Link to="/contact" className="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-lg border border-slate-700 text-white hover:bg-slate-800 transition-colors">
-                        View Full Catalog
-                    </Link>
+            {/* Popular Brands Section */}
+            <section className="py-16 bg-slate-900/30 border-y border-slate-800">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <h3 className="text-2xl font-bold text-white mb-10">Popular Brands We Work With</h3>
+                    <div className="flex flex-wrap justify-center gap-x-12 gap-y-8 items-center">
+                        {brands.map((brand, index) => (
+                            <span key={index} className="text-xl md:text-2xl font-bold text-slate-500 hover:text-white transition-colors duration-300 cursor-default select-none">
+                                {brand}
+                            </span>
+                        ))}
+                    </div>
                 </div>
             </section>
 
@@ -153,6 +133,11 @@ const Home = () => {
                                     </li>
                                 ))}
                             </ul>
+                            <div className="mt-8">
+                                <Link to="/contact" className="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-lg bg-white text-dark hover:bg-slate-200 transition-colors cursor-pointer relative z-20">
+                                    Get Started
+                                </Link>
+                            </div>
                         </div>
                         <div className="relative h-64 md:h-full min-h-[300px] rounded-xl overflow-hidden">
                             <img
