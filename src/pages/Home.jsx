@@ -19,7 +19,7 @@ const Home = () => {
             id: 2,
             name: "Cardio",
             description: "Boxing, battle ropes, and endurance gear.",
-            image: "/images/cardio-boxing.png",
+            image: "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&q=80&w=800",
             icon: <Activity className="h-6 w-6" />
         },
         {
@@ -53,7 +53,7 @@ const Home = () => {
                         We supply the world's leading brands to elevate your business.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-primary text-white hover:bg-rose-700 transition-all transform hover:scale-105 cursor-pointer relative z-30">
+                        <Link to="/contact" className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-full bg-primary text-white hover:bg-accent transition-all transform hover:scale-105 cursor-pointer relative z-30">
                             Request a Quote
                             <ArrowRight className="ml-2 h-5 w-5" />
                         </Link>
@@ -75,7 +75,7 @@ const Home = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {collections.map((collection) => (
-                        <div key={collection.id} className="group relative h-[400px] rounded-2xl overflow-hidden border border-slate-800 hover:border-primary/50 transition-all duration-500">
+                        <div key={collection.id} className="group relative h-[600px] rounded-2xl overflow-hidden border border-slate-800 hover:border-primary/50 transition-all duration-500">
                             <img
                                 src={collection.image}
                                 alt={collection.name}
