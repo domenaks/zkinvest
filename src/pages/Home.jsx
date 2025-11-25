@@ -73,9 +73,9 @@ const Home = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
                     {collections.map((collection) => (
-                        <div key={collection.id} className="group relative aspect-square rounded-2xl overflow-hidden border border-slate-800 hover:border-primary/50 transition-all duration-500">
+                        <div key={collection.id} className="group relative h-[400px] rounded-2xl overflow-hidden border border-slate-800 hover:border-primary/50 transition-all duration-500">
                             <img
                                 src={collection.image}
                                 alt={collection.name}
