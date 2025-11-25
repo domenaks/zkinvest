@@ -19,7 +19,7 @@ const Home = () => {
             id: 2,
             name: "Cardio",
             description: "Boxing, battle ropes, and endurance gear.",
-            image: "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&q=80&w=800",
+            image: "https://images.unsplash.com/photo-1549719386-74dfc4417351?auto=format&fit=crop&q=80&w=800",
             icon: <Activity className="h-6 w-6" />
         },
         {
@@ -73,7 +73,7 @@ const Home = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {collections.map((collection) => (
                         <div key={collection.id} className="group relative h-[400px] rounded-2xl overflow-hidden border border-slate-800 hover:border-primary/50 transition-all duration-500">
                             <img
