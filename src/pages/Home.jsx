@@ -45,8 +45,8 @@ const Home = () => {
                 </div>
 
                 <div className="relative z-20 text-center max-w-4xl mx-auto px-4">
-                    <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-                        Build Your <span className="text-primary">Dream Facility (v2)</span>
+                    <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight font-heading">
+                        Build Your <span className="text-primary">Dream Facility</span>
                     </h1>
                     <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
                         Premium gym equipment for professional fitness centers, hotels, and corporate gyms.

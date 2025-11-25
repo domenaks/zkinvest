@@ -7,14 +7,29 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: '#E11D48', // Rose-600
-                secondary: '#0F172A', // Slate-900
-                accent: '#F43F5E', // Rose-500
-                dark: '#020617', // Slate-950
-                light: '#F8FAFC', // Slate-50
+                primary: '#D4AF37', // Gold
+                secondary: '#141414', // Dark Gray
+                accent: '#F2C94C', // Lighter Gold
+                dark: '#0a0a0a', // Black
+                light: '#E5E5E5', // Silver/Light Gray
+                // Override slate to be neutral (remove blue tint)
+                slate: {
+                    50: '#fafafa',
+                    100: '#f5f5f5',
+                    200: '#e5e5e5',
+                    300: '#d4d4d4', // Used for text-secondary
+                    400: '#a3a3a3',
+                    500: '#737373',
+                    600: '#525252',
+                    700: '#404040',
+                    800: '#262626', // Used for borders
+                    900: '#141414', // Used for backgrounds
+                    950: '#0a0a0a',
+                }
             },
             fontFamily: {
                 sans: ['Inter', 'sans-serif'],
+                heading: ['Outfit', 'sans-serif'],
             },
         },
     },
