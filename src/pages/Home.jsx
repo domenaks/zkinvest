@@ -19,7 +19,7 @@ const Home = () => {
             id: 2,
             name: "Cardio",
             description: "Boxing, battle ropes, and endurance gear.",
-            image: "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&q=80&w=800",
+            image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&q=80&w=800",
             icon: <Activity className="h-6 w-6" />
         },
         {
