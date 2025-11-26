@@ -19,7 +19,7 @@ const Home = () => {
             id: 2,
             name: "Cardio",
             description: "Boxing, battle ropes, and endurance gear.",
-            image: "https://images.unsplash.com/photo-1509563268479-0f004cf3f58b?auto=format&fit=crop&q=80&w=800",
+            image: "https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?auto=format&fit=crop&q=80&w=800",
             icon: <Activity className="h-6 w-6" />
         },
         {
@@ -65,7 +65,7 @@ const Home = () => {
             </section>
 
             {/* Our Collections Section */}
-            <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-12">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our collections</h2>
                     <p className="text-slate-400 max-w-2xl mx-auto">
