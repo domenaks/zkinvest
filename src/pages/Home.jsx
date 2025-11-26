@@ -12,14 +12,14 @@ const Home = () => {
             id: 1,
             name: "Strength",
             description: "Premium dumbbells, plates, and racks.",
-            image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=800",
+            image: "/images/cat-strength.png",
             icon: <Dumbbell className="h-6 w-6" />
         },
         {
             id: 2,
             name: "Cardio",
             description: "Boxing, battle ropes, and endurance gear.",
-            image: "https://images.unsplash.com/photo-1549719386-74dfc4417351?auto=format&fit=crop&q=80&w=800",
+            image: "/images/cardio-battle-ropes.jpg",
             icon: <Activity className="h-6 w-6" />
         },
         {
