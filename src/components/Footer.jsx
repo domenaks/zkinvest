@@ -48,7 +48,11 @@ const Footer = () => {
                             </li>
                             <li className="flex items-start gap-3">
                                 <MapPin className="h-5 w-5 text-primary shrink-0" />
-                                <span className="text-slate-400 text-sm">Riga, Latvia</span>
+                                <div className="text-slate-400 text-sm">
+                                    <p>Rīga, Malkas iela 17, LV-1063</p>
+                                    <p className="mt-1">Reg.nr. 40203254688</p>
+                                    <p>VAT nr. LV40203254688</p>
+                                </div>
                             </li>
                         </ul>
                     </div>
